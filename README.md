@@ -8,7 +8,7 @@ A sample app to handle form submissions from static websites
 
 Just a damn button
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploytemplate=https://github.com/visup/form-clerk)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/visup/form-clerk)
 
 Then, in your website(s), set the form POST url to `/s/` of your heroku app.
 
