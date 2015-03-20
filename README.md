@@ -4,13 +4,15 @@
 
 A sample app to handle form submissions from static websites
 
+## Usage
+
+In your website(s), set the form POST url to `/s/` of FormClerk app. A new email will be dispatched to the address you've set during heroku setup (or `DESTINATION_MAILS` env variable) with all the parameters you've sent
+
 ## Setup
 
 Just a damn button
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/visup/form-clerk)
-
-Then, in your website(s), set the form POST url to `/s/` of your heroku app.
 
 E.g. if your app is called `myclerk.herokuapp.com` use `https://myclerk.herokuapp.com/s/` as the form endpoint.
 
