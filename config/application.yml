@@ -1,0 +1,27 @@
+defaults: &defaults
+  destinations: <%= ENV['DESTINATION_MAILS'] %>
+  default_from: <%= ENV['SOURCE_ADDRESS'] %>
+
+  mailer:
+    address:    smtp.mandrillapp.com
+    port:       587
+    user_name:  <%= ENV['MANDRILL_USERNAME'] %>
+    password:   <%= ENV['MANDRILL_APIKEY'] %>
+    domain:     heroku.com
+
+development:
+  <<: *defaults
+
+  # Mailcatcher
+  mailer:
+    address:        localhost
+    port:           1025
+    user_name:
+    password:
+    domain:
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
