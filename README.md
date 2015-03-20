@@ -1,4 +1,4 @@
-![Logo](https://s3-eu-west-1.amazonaws.com/visup-misc/open-source/form-clerk/logo_wide.png)
+![Logo](https://s3-eu-west-1.amazonaws.com/visup-misc/open-source/form-clerk/logo_wide_light.png)
 
 # Form Clerk
 
