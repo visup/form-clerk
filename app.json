@@ -2,7 +2,7 @@
   "name": "Form Clerk",
   "description": "A small app that handles form submissions from static websites",
   "repository": "https://github.com/visup/form-clerk",
-  "logo": "",
+  "logo": "https://s3-eu-west-1.amazonaws.com/visup-misc/open-source/form-clerk/logo_square_light.png",
   "keywords": ["rails", "form", "mail"],
   "env": {
     "DESTINATION_MAILS": {
