@@ -1,0 +1,13 @@
+.row
+  .col-lg-6.col-lg-offset-3
+    h2.text-center Your forms
+    ul.list-group
+      / Show current forms
+      each form in model
+        li.list-group-item
+          = form.name
+          .pull-right
+            = form.submitUrl
+      / Create new form
+      li.list-group-item
+        = input value=newName action='createForm' type='text' placeholder='New form name'

@@ -1,0 +1,29 @@
+%nav.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{ 'data-target': '#navbar', 'data-toggle': 'collapse' }
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{ href: root_path } Form Clerk
+    / Collect the nav links, forms, and other content for toggling
+    #navbar.collapse.navbar-collapse
+      -#
+        %ul.nav.navbar-nav
+          %li.active
+            %a{ href: '#' }
+              Link
+      %ul.nav.navbar-nav.pull-right
+        - if user_signed_in?
+          %li
+            = link_to 'Logout', destroy_user_session_path, method: :delete
+        - else
+          %li
+            = link_to 'Login', new_user_session_path
+
+.container
+  - flash.each do |type, message|
+    %div{ class: "alert #{bootstrap_class_for(type)} alert-dismissable fade in" }
+      %button.close{ 'data-dismiss': 'alert' } ×
+      = message
