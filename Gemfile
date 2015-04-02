@@ -7,6 +7,7 @@ gem 'rack-cors'
 gem 'devise'
 gem 'valid_email'
 
+gem 'uglifier'
 gem 'sass-rails'
 gem 'coffee-rails'
 gem 'haml-rails'
