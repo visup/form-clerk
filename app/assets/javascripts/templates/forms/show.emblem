@@ -1,0 +1,17 @@
+.row
+  .col-lg-6.col-lg-offset-3
+    h2.text-center Form '{{ name }}'
+    table.table
+      tr
+        td Name
+        td = name
+      tr
+        td Submit url
+        td = submitUrl
+      tr
+        td Forwarding emails
+        td
+          = input value=email action='saveForm' type='text' placeholder='Comma separated list of emails'
+          each error in errors.email
+            .alert.alert-danger
+              error.message

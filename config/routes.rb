@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  scope defaults: { format: 'json' }, constraints: { format: 'json' } do
+  with_options defaults: { format: 'json' }, constraints: { format: 'json' } do
     resources :forms do
       post 's', on: :member, as: :submit
     end

@@ -15,11 +15,21 @@ class Form < ActiveRecord::Base
 
   belongs_to :user
   before_validation :ensure_code
+  before_validation :validate_emails
 
-  validates :name, :code, presence: true
+  validates :name, :code, :email, presence: true
   validates :code, uniqueness: { case_sensitive: false }
 
   private
+
+    def validate_emails
+      return if self.email.blank?
+      emails = self.email.split(',').map(&:strip).reject(&:blank?)
+      emails.each do |email|
+        self.errors.add :email, "#{email} is an invalid email" unless ValidateEmail.valid? email
+      end
+      self.email = emails.join ','
+    end
 
     def ensure_code
       self.code = generate_code if self.code.blank?

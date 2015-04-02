@@ -1,4 +1,4 @@
-FormClerk.FormsController = Ember.ArrayController.extend
+FormClerk.FormsIndexController = Ember.ArrayController.extend
   actions:
     createForm: ->
       name = @get 'newName'
